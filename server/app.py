@@ -107,7 +107,7 @@ class MemberOnlyArticle(Resource):
         # There's a problem here!! correct it then uncomment this
         if not article:
             return {
-                'error': 'Unauthorized'
+                'error': 'Article not found'
             }, 200
         return make_response(jsonify(article.to_dict()), 200)
 
